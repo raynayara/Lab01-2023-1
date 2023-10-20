@@ -8,7 +8,7 @@ public class App {
         while (inicio <= fim) {
             meio = (inicio + fim) / 2 ; // Calcula o índice do elemento do meio
             if (arrayOrdenado[meio] == num) {
-                return meio; // Elemento encontrado, retorna a posição (índice) do elemento
+                return 1; // Elemento encontrado, retorna a posição (índice) do elemento
             } else if (arrayOrdenado[meio] < num) {
                 inicio = meio + 1; // Atualiza o índice esquerdo para a metade da direita
             } else {
@@ -16,29 +16,26 @@ public class App {
             }
         }
         
-        return -1; // Elemento não encontrado
+        return 0; // Elemento não encontrado
     }
-}
+
 
 //---------------------------------------------------------------------------------------------
 
-    public static int maior(int[] arrayDesordenado, int num){
-        int maior = arrayDesordenado[0]; //definindo o elemento inicial como o maior
+    public static int maior(int[] arrayDesordenado){
+    
+        int Maior = arrayDesordenado[0]; //definindo o elemento inicial como o maior
         for (int i = 0; i < arrayDesordenado.length; i++) {
 
-            if (arrayDesordenado[i] > maior) {
-                maior = arrayDesordenado[i]; //atualização do maior elemento 
+            if (arrayDesordenado[i] > Maior) {
+                Maior = arrayDesordenado[i]; //atualização do maior elemento 
             }
         }
         
-        return maior; // mostra o maior elemento encontrado 
+        return Maior; // mostra o maior elemento encontrado 
     }
 
-    
+}    
 
 //---------------------------------------------------------------------------------------------
 
-    public static Integer parMaisProximo(Integer[][] pares){
-        return 1;
-    }
-}
